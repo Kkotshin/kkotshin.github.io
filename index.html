@@ -1,13 +1,14 @@
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="About">
-    <title>About</title>
+    <meta name="description" content="Kkotshin">
+    <title>Kkotshin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             background-color: rgb(255, 255, 255);
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: rgb(16, 0, 192);
-            margin-top: 100px;
+            color: rgb(0, 58, 182);
+            margin-top: 50px;
             text-align: center;
 
             padding: 0;
@@ -42,7 +43,7 @@
         #ap,
         #kinglear,
         #matariki {
-            width: 150px;
+            width: 200px;
 
             object-fit: cover;
             object-position: bottom;
@@ -175,13 +176,11 @@
     <div class="topnav">
         <a href="about.html">About</a>
         <a href="archives">Archive</a>
-        <a href="Photobooth.html">
-            <img id="Photobooth" src="photobooth.png" alt="Click to visit Photobooth">
-        </a>
+        <a href="photobooth.html">
+            <img id="Photobooth" src="photobooth.png" alt="Click to visit Photobooth"> </a>
         <a href="#texts">Texts</a>
 
-        <a href="https://google.com">Contact
-        </a>
+        <a href="#" id="contactLink"> Contact </a>
     </div>
 
 
@@ -192,6 +191,42 @@
         <img id="kinglear" src="kinglear.png" alt="King Lear Image">
         <img id="matariki" src="matariki.png" alt="Matariki Image">
     </footer>
+    <div id="blurOverlay" style="display:none; position: fixed; top:0; left:0; width: 100vw; height: 100vh;
+        backdrop-filter: blur(6px); background-color: rgba(0,0,0,0.2); z-index:999;">
+    </div>
+
+    <div id="contactPopup"
+        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+     background-color: rgba(16, 55, 138, 0.85); color: white; padding: 20px; border: 2px solid white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000;">
+        <h2> Contact Me </h2>
+        <p>✉️ ssosaeng@gmail.com</p>
+        <p>
+            <i class="fab fa-instagram" style="color: #E1306C; margin-right:8px;"></i>
+            @kkotshin
+        </p>
+        <button onclick="closePopup()"
+            style="background-color: white; color: #1000c0; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
+            Close
+        </button>
+
+    </div>
+    <script>
+        const contactLink = document.getElementById('contactLink');
+        const popup = document.getElementById('contactPopup');
+        const overlay = document.getElementById('blurOverlay');
+
+        contactLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+
+        function closePopup() {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    </script>
+
 </body>
 
 </html>
