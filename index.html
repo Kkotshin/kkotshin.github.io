@@ -59,6 +59,10 @@
             padding: 0;
         }
 
+        #ap {
+            cursor: pointer;
+        }
+
 
         #feet:hover {
             animation-name: spin;
@@ -227,27 +231,43 @@
 
             <a href="https://instagram.com/kkotshin"> @kkotshin</a>
         </p>
-        <button onclick="closePopup()"
+        <button onclick="closePopups()"
             style="background-color: white; color: #6964a1; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
             Close
         </button>
 
     </div>
 
-    <iframe src="https://bobs-server.net/boxes/cmjx0gadg003xmg4hjanak602"></iframe>
+    <div id="commentPopup"
+        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+     background-color:rgb(67, 91, 143); color: white; padding: 20px; border: 2px solid white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000;">
+        <iframe src="https://bobs-server.net/boxes/cmjx0gadg003xmg4hjanak602"></iframe>
+        <button onclick="closePopups()"
+            style="background-color: white; color: #6964a1; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
+            Close
+        </button>
+    </div>
+
+
     <script>
         const contactLink = document.getElementById('contactLink');
-        const popup = document.getElementById('contactPopup');
+        const contactPopup = document.getElementById('contactPopup');
+        const commentPopup = document.getElementById('commentPopup');
         const overlay = document.getElementById('blurOverlay');
-
+        const ap = document.getElementById('ap');
         contactLink.addEventListener('click', function (event) {
             event.preventDefault();
-            popup.style.display = 'block';
+            contactPopup.style.display = 'block';
             overlay.style.display = 'block';
         });
-
-        function closePopup() {
-            popup.style.display = 'none';
+        ap.addEventListener('click', function (event) {
+            event.preventDefault();
+            commentPopup.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+        function closePopups() {
+            contactPopup.style.display = 'none';
+            commentPopup.style.display = 'none';
             overlay.style.display = 'none';
         }
     </script>

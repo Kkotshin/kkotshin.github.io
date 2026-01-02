@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <title>Kkotshin</title>
+
+    <link rel="stylesheet" href="box.css">
+
+</head>
+
+<body class="box-body">
+    <h1 class="box-name">Kkotshin</h1>
+
+    <form method="post" class="new-post-form" action="/boxes/cmjx0gadg003xmg4hjanak602/posts">
+        <label for="content" class="new-post-message-label">message</label>
+        <textarea class="new-post-message" id="content" name="content" required="" maxlength="2000"></textarea>
+
+        <label for="from" class="new-post-poster-label">name</label>
+        <input placeholder="name (optional)" class="new-post-poster" id="from" name="from" maxlength="100">
+
+        <label for="email" class="new-post-email-label">reply address</label>
+        <input placeholder="email (optional)" class="new-post-email" id="email" name="email" pattern="^\S+@\S+\.\S+$"
+            title="A valid email address" maxlength="100" value="ssosaeng@gmail.com">
+
+
+
+        <button class="new-post-submit">submit</button>
+    </form>
+
+
+    <table class="post-table">
+        <thead class="post-thead">
+            <tr class="post-header">
+                <th class="post-message post-header-cell">post</th>
+                <th class="post-poster post-header-cell">poster</th>
+                <th class="post-date post-header-cell">date</th>
+                <th class="post-delete post-header-cell">delete</th>
+
+                <th class="post-reply post-header-cell">reply</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="post-row">
+                <td class="post-message">
+
+                    <div class="post-message-content">Test message</div>
+                </td>
+                <td class="post-poster">poster</td>
+                <td class="post-date">
+                    <a class="post-date-link" href="?cursor=cmjx0q4bz0042mg4h2g92ux8n">
+                        <span class="date-time" data-ms="1767367076976">2026. 1. 2. 오후 4:17:56</span>
+                    </a>
+                </td>
+                <td class="post-delete">
+
+                    <form class="delete-form" method="POST"
+                        action="/boxes/cmjx0gadg003xmg4hjanak602/posts/cmjx0q4bz0042mg4h2g92ux8n/delete">
+                        <button class="delete-form-submit">delete</button>
+                    </form>
+
+                </td>
+
+                <td class="post-reply">
+                    <details>
+                        <summary>reply</summary>
+                        <form method="post" class="new-post-form" action="/boxes/cmjx0gadg003xmg4hjanak602/posts">
+                            <label for="content" class="new-post-message-label">message</label>
+                            <textarea class="new-post-message" id="content" name="content" required=""
+                                maxlength="2000"></textarea>
+
+                            <label for="from" class="new-post-poster-label">name</label>
+                            <input placeholder="name (optional)" class="new-post-poster" id="from" name="from"
+                                maxlength="100">
+
+                            <label for="email" class="new-post-email-label">reply address</label>
+                            <input placeholder="email (optional)" class="new-post-email" id="email" name="email"
+                                pattern="^\S+@\S+\.\S+$" title="A valid email address" maxlength="100"
+                                value="ssosaeng@gmail.com">
+
+
+                            <input type="hidden" name="parent" value="cmjx0q4bz0042mg4h2g92ux8n" readonly="">
+
+
+                            <button class="new-post-submit">submit</button>
+                        </form>
+
+                    </details>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <script>
+        for (const element of document.getElementsByClassName("date-time")) {
+            element.textContent = new Date(Number(element.dataset.ms)).toLocaleString();
+        }
+    </script>
+
+
+
+
+
+    <details class="more-controls-details">
+        <summary class="more-controls-summary">more controls</summary>
+        <form name="more-controls-form">
+
+            <button class="dead-form-show-dead dead-form-button" name="dead" value="true">show dead</button>
+
+
+
+
+
+
+
+        </form>
+
+        <form class="subscribe-form more-controls-form" method="post"
+            action="/boxes/cmjx0gadg003xmg4hjanak602/subscribe">
+            <input placeholder="email" name="email" required="" pattern="^\S+@\S+\.\S+$" title="A valid email address"
+                maxlength="100" value="ssosaeng@gmail.com">
+            <button class="subscribe-button">subscribe</button>
+
+
+
+
+
+
+
+
+        </form>
+    </details>
+
+
+</body>
+
+</html>
