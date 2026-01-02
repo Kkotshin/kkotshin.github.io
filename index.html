@@ -10,13 +10,15 @@
             color: rgb(0, 58, 182);
             margin-top: 50px;
             text-align: center;
-
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
             padding: 0;
 
         }
 
         footer {
-            position: fixed;
             bottom: 0;
             width: 100%;
             display: flex;
@@ -27,6 +29,12 @@
             gap: 8px;
             padding: 10px 0;
             background-color: white;
+
+        }
+
+        #menu {
+            display: flex;
+            flex-direction: column;
 
         }
 
@@ -167,20 +175,32 @@
 </head>
 
 <body>
-    <h1>
-        Hello, I'm Kkotshin Im!
-    </h1>
-    <p>
-        (❁ᴗ͈ˬᴗ͈)◞
-    </p>
-    <div class="topnav">
-        <a href="about.html">About</a>
-        <a href="archives">Archive</a>
+    <div>
+
+
+        <h1>
+            Hello, I'm Kkotshin Im!
+        </h1>
+        <p>
+            (❁ᴗ͈ˬᴗ͈)◞
+        </p>
+        <div id="menu" class="topnav">
+
+
+        </div>
+
         <a href="photobooth.html">
             <img id="Photobooth" src="photobooth.png" alt="Click to visit Photobooth"> </a>
-        <a href="#texts">Texts</a>
 
-        <a href="#" id="contactLink"> Contact </a>
+        <div>
+            <a href="about.html">About</a>
+            <a href="archives">Archive</a>
+            <a href="#texts">Texts</a>
+            <a href="#" id="contactLink"> Contact </a>
+        </div>
+
+
+    </div>
     </div>
 
 
