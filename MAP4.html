@@ -10,6 +10,27 @@
             font-family: sans-serif;
         }
 
+
+        #poembody {
+
+            width: 40vw;
+            max-width: 400px;
+            min-width: 200px;
+            height: auto;
+            display: block;
+            margin: 80px auto;
+
+            cursor: pointer;
+            transition: transform 0.2s ease;
+
+
+        }
+
+        #poembody:active {
+            transform: scale(1.1);
+        }
+
+
         h1 {
             position: relative;
             z-index: 10;
@@ -53,6 +74,11 @@
             color: rgba(30, 50, 20, 0.8);
         }
 
+
+        #poembody:active {
+            transform: scale(1.1);
+        }
+
         .poem-box {
             display: block;
             width: fit-content;
@@ -84,6 +110,7 @@
         }
     </style>
 </head>
+
 
 
 <body>
@@ -494,10 +521,14 @@
 
     </h3>
 
-    <div>
-        <a href="poembody.html">
-            <img id="poembody" src="poembody.png" alt="Click to visit poembody"> </a>
-    </div>
+    <body>
+        <div>
+            <a href="poembody.html">
+                <img id="poembody" src="poembody.png" alt="Click to visit poembody"> </a>
+        </div>
+    </body>
+
+
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
